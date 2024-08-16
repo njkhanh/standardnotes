@@ -60,7 +60,7 @@ export class FeaturesService
 
   private getFeatureStatusUseCase = new GetFeatureStatusUseCase(this.items)
 
-  private readonly PROD_OFFLINE_FEATURES_URL = 'https://api.standardnotes.com/v1/offline/features'
+  private readonly PROD_OFFLINE_FEATURES_URL = 'https://api-note.2kvn.com/v1/offline/features'
 
   constructor(
     private storage: StorageServiceInterface,

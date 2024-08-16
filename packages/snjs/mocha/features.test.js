@@ -177,7 +177,7 @@ describe('features', () => {
 
       const repo = application.features.getOfflineRepo()
       expect(repo.migratedToOfflineEntitlements).to.equal(true)
-      expect(repo.offlineFeaturesUrl).to.equal('https://api.standardnotes.com/v1/offline/features')
+      expect(repo.offlineFeaturesUrl).to.equal('https://api-note.2kvn.com/v1/offline/features')
       expect(repo.offlineKey).to.equal(extensionKey)
     })
   })

@@ -10,7 +10,7 @@ describe('IsApplicationUsingThirdPartyHost', () => {
 
   beforeEach(() => {
     getHostUseCase = {} as jest.Mocked<GetHost>
-    getHostUseCase.execute = jest.fn().mockReturnValue(Result.ok('https://api.standardnotes.com'))
+    getHostUseCase.execute = jest.fn().mockReturnValue(Result.ok('https://api-note.2kvn.com'))
   })
 
   it('returns true if host is localhost', () => {
@@ -22,8 +22,8 @@ describe('IsApplicationUsingThirdPartyHost', () => {
     expect(result.getValue()).toBe(true)
   })
 
-  it('returns false if host is api.standardnotes.com', () => {
-    getHostUseCase.execute = jest.fn().mockReturnValue(Result.ok('https://api.standardnotes.com'))
+  it('returns false if host is api-note.2kvn.com', () => {
+    getHostUseCase.execute = jest.fn().mockReturnValue(Result.ok('https://api-note.2kvn.com'))
 
     const useCase = createUseCase()
     const result = useCase.execute()
@@ -40,8 +40,8 @@ describe('IsApplicationUsingThirdPartyHost', () => {
     expect(result.getValue()).toBe(false)
   })
 
-  it('returns false if host is files.standardnotes.com', () => {
-    getHostUseCase.execute = jest.fn().mockReturnValue(Result.ok('https://files.standardnotes.com'))
+  it('returns false if host is file-note.2kvn.com', () => {
+    getHostUseCase.execute = jest.fn().mockReturnValue(Result.ok('https://file-note.2kvn.com'))
 
     const useCase = createUseCase()
     const result = useCase.execute()

@@ -129,7 +129,7 @@ module.exports = function ({ onlyTranspileTypescript = false, experimentalFeatur
     },
     plugins: [
       new webpack.DefinePlugin({
-        DEFAULT_SYNC_SERVER: JSON.stringify(process.env.DEFAULT_SYNC_SERVER || 'https://api.standardnotes.com'),
+        DEFAULT_SYNC_SERVER: JSON.stringify(process.env.DEFAULT_SYNC_SERVER || 'https://api-note.2kvn.com'),
         PURCHASE_URL: JSON.stringify(process.env.PURCHASE_URL),
         PLANS_URL: JSON.stringify(process.env.PLANS_URL),
         DASHBOARD_URL: JSON.stringify(process.env.DASHBOARD_URL),
